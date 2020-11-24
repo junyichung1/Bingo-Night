@@ -5,12 +5,23 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
+import CardThemes from '../../components/CardThemes/CardThemes';
+import Rankings from '../../components/Rankings/Rankings';
+import Events from '../../components/Events/Events';
+import Footer from '../../components/Footer/Footer';
+import Admin from '../../components/Admin/Admin'
+
+
+
+
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: userService.getUser()
+      user: userService.getUser(),
+      allUsers: []
     };
   }
 
@@ -25,16 +36,31 @@ class App extends Component {
   }
   /*--- Lifecycle Methods ---*/
 
+  async componentDidMount() {
+    const allUsers = await userService.getAll();
+    console.log(allUsers)
+      this.setState({allUsers});
+  }
+
   render() {
     return (
-      <div>
+      <>
+      <div className="container">
         <NavBar 
         user={this.state.user} 
         handleLogout={this.handleLogout}
         />
         <Switch>
           <Route exact path='/' render={() =>
-           <div>Hello World!</div> 
+          <>
+          <CardThemes />
+          <div className="midsection">
+          <Rankings />
+          <Events />
+          </div>
+            
+          
+          </>
           }/>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
@@ -49,8 +75,19 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
+
+          <Route exact path='/admin' render={() => 
+            <Admin
+            users={this.state.allUsers}
+            />
+          }/>
         </Switch>
       </div>
+        <div>
+
+        <Footer />
+        </div>
+      </>
     );
   }
 }

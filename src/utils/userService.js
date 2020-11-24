@@ -5,9 +5,20 @@ export default {
     signup,
     getUser,
     logout,
-    login
+    login,
+    getAll
   };
 
+
+  export function getAll() {
+    return fetch(`${BASE_URL}`, {
+      method: 'GET',
+      headers: {
+        // 'content-type': 'application/json',
+        'Authorization': 'Bearer ' + tokenService.getToken()
+      }})
+    .then(res => res.json());
+  }
 
 function signup(user) {
     return fetch(BASE_URL + 'signup', {

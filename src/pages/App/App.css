@@ -1,0 +1,20 @@
+.container {
+    position: relative; 
+    min-height: 710px;
+    /* padding-bottom: 50px; */
+}
+.midsection {
+    display: flex;
+    flex-wrap: wrap;
+}
+.miditem {
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3 {
+    text-align: center;
+}
+.list {
+    padding-left: 25px;
+}

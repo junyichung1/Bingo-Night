@@ -1,7 +1,7 @@
 .NavBar {
     display: flex;
-    justify-content: center;
-    margin: 0 0 20px;
+    justify-content: space-between;
+    margin: 20px 5px 20px 0;
   }
   
   .NavBar-link {
@@ -10,4 +10,6 @@
   
   .NavBar-welcome {
     color: grey;
+  }
+  .left {
   }
