@@ -12,7 +12,7 @@ import Footer from '../../components/Footer/Footer';
 import Admin from '../../components/Admin/Admin'
 import EventsPage from '../../components/EventsPage/EventsPage'
 import Confirmation from '../../components/Confirmation/Confirmation'
-
+import BingoBoard from '../../components/BoardPage/BoardPage'
 
 
 
@@ -55,8 +55,12 @@ class App extends Component {
           <>
           <CardThemes />
           <div className="midsection">
-          <Rankings />
-          <Events />
+          <Rankings 
+          user={this.state.user}
+          />
+          <Events 
+          user={this.state.user}
+          />
           </div>
             
           
@@ -75,9 +79,15 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
+          <Route exact path='/bingocard' render={() => 
+            <BingoBoard
+            users={this.state.allUsers}
+            />
+          }/>
 
           <Route exact path='/admin' render={() => 
             <Admin
+            user={this.state.user}
             users={this.state.allUsers}
             />
           }/>

@@ -2,9 +2,19 @@
     display: flex;
     justify-content: center;
 }
-.name {
+.table {
+    color:white;
+    text-align: center;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
 
 }
-.email {
-
+.head {
+    text-align: center;
+}
+.rows {
+    display: flex;
+    justify-content: flex-end;
 }

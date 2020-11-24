@@ -1,13 +1,13 @@
 import React from 'react';
-
+import './AdminItem.css'
 
 function AdminItem(props) {
     return(
 <>
-<table>
-    <tr>
-        <td>{props.name}</td>
-        <td>{props.email}</td>
+<table className="center">
+    <tr className="rows">
+        <td className="head">{props.name}</td>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <td className="head">{props.email}</td>
     </tr>
 </table>
 

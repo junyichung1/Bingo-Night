@@ -2,13 +2,25 @@ import React from 'react';
 import Rankpic from '../../images/rankpic.png'
 
 function rankings(props) {
-    return(
+    let ranking = props.user ?
+    <div>
+
         <>
         <div className="miditem">
 
-        <div><img src={Rankpic}></img></div>
+        <img src={Rankpic}></img>
         </div>
         </>
+        </div>
+        :
+        <div>
+            <h3 className="logout"></h3>
+        </div>
+    
+    return(
+<>
+{ranking}
+</>
     )
 }
 

@@ -3,15 +3,15 @@ import AdminItem from "../AdminItem/AdminItem"
 import "./Admin.css"
 
 function admin(props) {
-    let users = props.users ?
-    <>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th> 
-                <th>Email</th>
+    let users = props.user ?
+    <div className="table">
+    <table className="center">
+        
+            <tr className="rows">
+                <th className="head"><u>Name</u></th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <th className="head"><u>Email</u></th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </tr>
-        </thead> 
+        
     </table> 
     {props.users.map(user => (
         
@@ -20,7 +20,7 @@ function admin(props) {
                     email={user.email}
                     />
                     ))}
-                    </>
+                    </div>
     :
 <>
 <div>nothing to report</div>
