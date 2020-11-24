@@ -11,7 +11,7 @@ import Events from '../../components/Events/Events';
 import Footer from '../../components/Footer/Footer';
 import Admin from '../../components/Admin/Admin'
 import EventsPage from '../../components/EventsPage/EventsPage'
-
+import Confirmation from '../../components/Confirmation/Confirmation'
 
 
 
@@ -83,6 +83,11 @@ class App extends Component {
           }/>
           <Route exact path='/events' render={() => 
             <EventsPage
+            
+            />
+          }/>
+          <Route exact path='/confirmation' render={() => 
+            <Confirmation
             
             />
           }/>
