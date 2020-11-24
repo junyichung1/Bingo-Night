@@ -1,15 +1,43 @@
 .NavBar {
     display: flex;
     justify-content: space-between;
-    margin: 20px 5px 20px 0;
+    align-items: center;
+    margin: 0px 5px 20px 0;
+    color: white;
+    background-color: #90B1AA;
+    font-weight: 600;
+    /* position: absolute; */
+    top: 0;
   }
   
   .NavBar-link {
-    margin: 0 10px;
+    margin: 0 30px;
+    color:white;
+    text-decoration: none;
+  }
+  .NavBar-link:hover {
+    text-decoration: underline;
   }
   
   .NavBar-welcome {
-    color: grey;
+    color: white;
+    font-weight: 400;
   }
   .left {
+    margin-top: 15px;
+    letter-spacing: 1.5px;
+  }
+  .right{
+    margin-top: 15px;
+    padding-right: 20px;
+  }
+  #logo {
+    height: 50px;
+    width: 200px;
+    margin-top: 15px;
+  }
+  .NavBar-logout {
+    padding: 0 0 0 10px;
+    color: white;
+    font-weight: 400;
   }

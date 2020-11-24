@@ -1,18 +1,12 @@
 import React from 'react';
+import Eventspic from '../../images/Group-14.png'
 
 function events(props) {
     return(
         <>
         <div className="miditem">
-        <h3><u>
-        Upcoming Events
-        </u>
-        </h3>
-        <ul>
-            <li className="list">November 10th</li>
-            <li className="list">November 17th</li>
-            <li className="list">November 23rd</li>
-        </ul>
+        
+        <div><img src={Eventspic}></img></div>
             
         </div>
         </>

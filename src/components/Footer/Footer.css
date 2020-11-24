@@ -1,11 +1,35 @@
+.footerbar {
+    background-color: #90B1AA;
+    height: 100px;
+}
+
 form {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    width: 350px;
-    border: 2px solid black;
-    bottom: 0;
+    width: 420px;
+    /* border: 2px solid black; */
+    bottom: 0px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 20px;
+    color: white;
+    font-weight: 600;
+}
+.submitbutton {
+    background-color: #FBD266;
+    margin-left: 60px;
+    transform: scale(1.5);
+    border: none;
+    box-shadow: 2px 2px 2px 1px grey;
+}
+.title {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.inputbar {
+    margin-right: 0px;
+    transform: scale(1.5);
 }

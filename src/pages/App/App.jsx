@@ -10,7 +10,7 @@ import Rankings from '../../components/Rankings/Rankings';
 import Events from '../../components/Events/Events';
 import Footer from '../../components/Footer/Footer';
 import Admin from '../../components/Admin/Admin'
-
+import EventsPage from '../../components/EventsPage/EventsPage'
 
 
 
@@ -79,6 +79,11 @@ class App extends Component {
           <Route exact path='/admin' render={() => 
             <Admin
             users={this.state.allUsers}
+            />
+          }/>
+          <Route exact path='/events' render={() => 
+            <EventsPage
+            
             />
           }/>
         </Switch>

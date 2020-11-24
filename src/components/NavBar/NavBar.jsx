@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
+import logo from '../../images/image.png'
 
 const NavBar = (props) => {
   let nav = props.user ?
   <>
+  <div className="logoclass">
+      <Link to='/' className='NavBar-link'><img id="logo" src={logo}></img></Link>
+  </div>
     <div className="left">
       <Link to='/' className='NavBar-link'>HOME</Link>
       <Link to='/about' className='NavBar-link'>ABOUT</Link>
@@ -12,9 +16,9 @@ const NavBar = (props) => {
       <Link to='/admin' className='NavBar-link'>ADMIN</Link>
       </div>
       <div className="right">
-      <Link to='' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <span className='NavBar-welcome'>WELCOME, {props.user.name}</span>
+      <span className='NavBar-welcome'> {props.user.name}</span>
+      &nbsp;&nbsp;|
+      <Link to='' className='NavBar-logout' onClick={props.handleLogout}>LOG OUT</Link>
     </div>
     </>
     :
